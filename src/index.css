@@ -8,30 +8,35 @@
 
 /* todo: get better font files? variable? */
 @font-face {
+  font-display: swap;
   font-family: Nexa;
   font-weight: 300;
   src: url("./assets/fonts/Nexa Light.otf") format("opentype");
 }
 
 @font-face {
+  font-display: swap;
   font-family: Nexa;
   font-weight: 350;
   src: url("./assets/fonts/Nexa Book.ttf") format("truetype");
 }
 
 @font-face {
+  font-display: swap;
   font-family: Nexa;
   font-weight: 400;
   src: url("./assets/fonts/Nexa Regular.otf") format("opentype");
 }
 
 @font-face {
+  font-display: swap;
   font-family: Nexa;
   font-weight: 700;
   src: url("./assets/fonts/Nexa Bold.otf") format("opentype");
 }
 
 @font-face {
+  font-display: swap;
   font-family: Nexa;
   font-weight: 900;
   src: url("./assets/fonts/Nexa Heavy.ttf") format("truetype");
@@ -41,6 +46,7 @@
 html, body {
   font-family: Nexa, sans-serif;
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 * {
