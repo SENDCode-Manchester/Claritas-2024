@@ -20,6 +20,7 @@ const Container = styled.div`
   justify-content: space-between;
   padding: 3vh 20vw;
   position: absolute;
+  top: 0;
   width: 100%;
 
   @media screen and (max-width: 480px), (orientation: landscape) and (min-height: 320px) and (max-height: 720px) {
