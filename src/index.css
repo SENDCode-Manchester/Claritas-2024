@@ -6,7 +6,6 @@
  * and fonts should have rules here.
  */
 
-/* todo: get better font files? variable? */
 @font-face {
   font-display: swap;
   font-family: Nexa;
@@ -47,6 +46,7 @@ html, body {
   font-family: Nexa, sans-serif;
   height: 100%;
   scroll-behavior: smooth;
+  scrollbar-color: #354860 #ffffff;
 }
 
 * {

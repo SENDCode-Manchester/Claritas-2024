@@ -1,8 +1,8 @@
 import {Footer} from "../components/nav/Footer.tsx";
 import {PageHeader} from "../components/PageHeader.tsx";
-import {useEffect, useState} from "react";
 import styled from "styled-components";
 import {LinkButton} from "../components/LinkButton.tsx";
+import {useLoaderData} from "react-router-dom";
 
 type Person = {
   name: string,
@@ -13,11 +13,11 @@ type Person = {
 const Grid = styled.div`
   display: grid;
   gap: 5vh;
-  grid-template-columns: repeat(3, 15vw);
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   margin: 50px 20vw;
 
-  @media screen and (max-width: 480px), (orientation: landscape) and (min-height: 320px) and (max-height: 720px) {
+  @media screen and (max-width: 730px), (orientation: landscape) and (min-height: 320px) and (max-height: 720px) {
     grid-template-columns: 1fr;
   }
 `;
@@ -57,22 +57,16 @@ const TeamName = styled.p`
 `;
 
 export function About() {
-  const [team, setTeam] = useState([]);
-
-  useEffect(function() {
-    fetch("http://localhost:3000/team")
-      .then(response => response.json())
-      .then(response => setTeam(response));
-  }, []);
+  const team: Person[] = useLoaderData() as Person[];
 
   return (
     <>
-      <PageHeader $backgroundImage={"/assets/images/pagehead_about.webp"} $backgroundPosition={"center 40%"} $title={"Meet the Team"} />
+      <PageHeader $backgroundImage={"/assets/images/pagehead_about.webp"} $backgroundPosition={"center 40%"} $darken={true} $title={"Meet the Team"} />
       <Grid>
         {team.map(function(item: Person, key) {
           return (
             <Item key={key}>
-              <TeamImage alt={`Picture of ${item.name}`} draggable="false" src={`http://localhost:3000/team_images/${item.name.replace(/ /g, "_").toLocaleLowerCase()}.webp`} />
+              <TeamImage alt={`Picture of ${item.name}`} draggable="false" loading={"lazy"} src={`${import.meta.env.VITE_API_HOST}/team_images/${item.name.replace(/ /g, "_").toLocaleLowerCase()}.webp`} />
               <TeamName>{item.name}</TeamName>
               <TeamDetails><a href={`mailto:${item.email}`}>{item.email}</a></TeamDetails>
               <TeamDetails>{item.role}</TeamDetails>

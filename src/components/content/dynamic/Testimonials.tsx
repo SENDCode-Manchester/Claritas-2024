@@ -100,7 +100,10 @@ const Testimonial = styled.div<{ $visible: boolean }>`
   opacity: 0;
   ${props => props.$visible && css`
     opacity: 1;`}
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
+  justify-content: center;
   padding: 24px;
   transition: opacity .1s ease;
   
