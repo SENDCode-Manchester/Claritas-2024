@@ -77,8 +77,8 @@ const Section = styled.div`
   }
 
   & img {
-    display: inline-block;
     height: 120px;
+    width: fit-content;
   }
 
   @media screen and (max-width: 480px), (orientation: landscape) and (min-height: 320px) and (max-height: 720px) {
