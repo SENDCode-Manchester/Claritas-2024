@@ -17,14 +17,14 @@ const router = createBrowserRouter([
     path: "/about",
     element: <About />,
     loader: async function() {
-      return await (await fetch(`${import.meta.env.VITE_API_HOST}/team`)).json();
+      return await (await fetch("/data/team.json")).json();
     }
   },
   {
     path: "/blog",
     element: <Blog />,
     loader: async function() {
-      return await (await fetch(`${import.meta.env.VITE_API_HOST}/blog`)).json();
+      return await (await fetch("/data/blog.json")).json();
     }
   },
   {
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
     path: "/blogs/:id",
     element: <BlogPost />,
     loader: async function() {
-      return await (await fetch(`${import.meta.env.VITE_API_HOST}/blog`)).json();
+      return await (await fetch("/data/blog.json")).json();
     }
   },
   {

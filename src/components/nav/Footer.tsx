@@ -116,7 +116,7 @@ const UpperContainer = styled.div`
   grid-template-rows: 1fr;
   padding: 2vh 2vw;
 
-  @media screen and (max-width: 480px), (orientation: landscape) and (min-height: 320px) and (max-height: 720px) {
+  @media screen and (max-width: 800px), (orientation: landscape) and (min-height: 320px) and (max-height: 720px) {
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);
     padding: 2vh 4vw;

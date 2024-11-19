@@ -19,7 +19,7 @@ const Grid = styled.div`
   grid-template-rows: 1fr;
   margin: 50px 20vw;
 
-  @media screen and (max-width: 480px), (orientation: landscape) and (min-height: 320px) and (max-height: 720px) {
+  @media screen and (max-width: 1500px), (orientation: landscape) and (min-height: 320px) and (max-height: 720px) {
     grid-template-columns: 1fr;
     margin: 50px 0;
   }
@@ -101,7 +101,7 @@ export function Blog() {
             <Item key={key}>
               <PostDate $date={item.date} />
               <PostContent>
-                <PostImage alt={item.title} draggable={false} loading={"lazy"} src={`${import.meta.env.VITE_API_HOST}/blog_images/${item.id}.webp`} />
+                <PostImage alt={item.title} draggable={false} loading={"lazy"} src={`/data/blog_images/${item.id}.webp`} />
                 <PostTitle>{item.title}</PostTitle>
                 <PostPreview>{item.content.join(" ").substring(0, 64).trim()}&hellip;</PostPreview>
                 <Link to={`/blogs/${item.id}`}>Read More</Link>

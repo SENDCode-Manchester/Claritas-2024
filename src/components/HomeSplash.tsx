@@ -39,6 +39,7 @@ export function HomeSplash() {
 
   useEffect(function() {
     // change the image every 10 seconds
+    // todo: there are bugs here but i have got absolutely no idea how to fix them
     const interval = setInterval(function() {
       setAnimate(false);
       if (splashImage > 3) return setSplashImage(1);

@@ -66,7 +66,7 @@ export function About() {
         {team.map(function(item: Person, key) {
           return (
             <Item key={key}>
-              <TeamImage alt={`Picture of ${item.name}`} draggable="false" loading={"lazy"} src={`${import.meta.env.VITE_API_HOST}/team_images/${item.name.replace(/ /g, "_").toLocaleLowerCase()}.webp`} />
+              <TeamImage alt={`Picture of ${item.name}`} draggable="false" loading={"lazy"} src={`/data/team_images/${item.name.replace(/ /g, "_").toLocaleLowerCase()}.webp`} />
               <TeamName>{item.name}</TeamName>
               <TeamDetails><a href={`mailto:${item.email}`}>{item.email}</a></TeamDetails>
               <TeamDetails>{item.role}</TeamDetails>

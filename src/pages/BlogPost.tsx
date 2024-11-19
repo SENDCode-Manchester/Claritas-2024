@@ -77,7 +77,7 @@ export function BlogPost() {
 
   return (
     <>
-      <PageHeader $backgroundImage={`${import.meta.env.VITE_API_HOST}/blog_images/${post.id}.webp`} $darken={true} $title={post.title} />
+      <PageHeader $backgroundImage={`/data/blog_images/${post.id}.webp`} $darken={true} $title={post.title} />
       <Container>
         <Breadcrumb>
           <Link to={"/blogs"}>
