@@ -3,7 +3,7 @@ on: push
 jobs:
   ci-dev:
     runs-on: ubuntu-latest
-    if: github.ref == "refs/heads/main"
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -44,7 +44,7 @@ jobs:
 
   ci-prod:
     runs-on: ubuntu-latest
-    if: github.ref == "refs/heads/stable"
+    if: github.ref == 'refs/heads/stable'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
