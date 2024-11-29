@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import {useEffect, useState} from "react";
 
 const Overflow = styled.div`
   height: 100%;
@@ -8,51 +7,72 @@ const Overflow = styled.div`
   width: 100%;
 `;
 
-const Background = styled.div<{ $animate: boolean; $i: number }>`
-  @keyframes splashAnim {
-    from {
-      transform: scale(1);
-    }
-    
-    to {
-      transform: scale(1.25);
-    }
-  }
-  
-  ${props => props.$animate && css`
-    animation: splashAnim 10s ease-in-out infinite;
-  `}
+const Background = styled.div<{ $i: number }>`
   ${props => css`
-    {/* Dynamically set through states, see useEffect in HomeSplash */}
+    @keyframes splashAnim${props.$i} {
+      0% {
+        opacity: ${props.$i === 1 ? '1' : '0'};
+        transform: ${props.$i === 4 ? 'scale(1.25)' : 'scale(1)'};
+      }
+
+      23% {
+        opacity: ${props.$i === 1 ? '1' : '0'};
+        transform: ${props.$i === 1 ? 'scale(1.25)' : 'scale(1)'};
+      }
+
+      25% {
+        opacity: ${props.$i === 2 ? '1' : '0'};
+        transform: ${props.$i === 1 ? 'scale(1.25)' : 'scale(1)'};
+      }
+
+      48% {
+        opacity: ${props.$i === 2 ? '1' : '0'};
+        transform: ${props.$i === 2 ? 'scale(1.25)' : 'scale(1)'};
+      }
+
+      50% {
+        opacity: ${props.$i === 3 ? '1' : '0'};
+        transform: ${props.$i === 2 ? 'scale(1.25)' : 'scale(1)'};
+      }
+
+      73% {
+        opacity: ${props.$i === 3 ? '1' : '0'};
+        transform: ${props.$i === 3 ? 'scale(1.25)' : 'scale(1)'};
+      }
+
+      75% {
+        opacity: ${props.$i === 4 ? '1' : '0'};
+        transform: ${props.$i === 3 ? 'scale(1.25)' : 'scale(1)'};
+      }
+
+      98% {
+        opacity: ${props.$i === 4 ? '1' : '0'};
+        transform: ${props.$i === 4 ? 'scale(1.25)' : 'scale(1)'};
+      }
+
+      100% {
+        opacity: ${props.$i === 1 ? '1' : '0'};
+        transform: ${props.$i === 4 ? 'scale(1.25)' : 'scale(1)'};
+      }
+    }
+
+    animation: splashAnim${props.$i} 40s ease-in-out infinite;
     background-image: url("/assets/images/splash_background${props.$i}.webp");
     background-position-x: center;
     background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
   `}
-  height: 100%;
-  transition: background-image ease 1s;
-  width: 100%;
 `;
 
 export function HomeSplash() {
-  const [animate, setAnimate] = useState(true);
-  const [splashImage, setSplashImage] = useState(1);
-
-  useEffect(function() {
-    // change the image every 10 seconds
-    // todo: there are bugs here but i have got absolutely no idea how to fix them
-    const interval = setInterval(function() {
-      setAnimate(false);
-      if (splashImage > 3) return setSplashImage(1);
-      setSplashImage(splashImage + 1);
-      setAnimate(true);
-    }, 10e3);
-
-    return () => clearInterval(interval);
-  }, [splashImage]);
-
   return (
     <Overflow>
-      <Background $animate={animate} $i={splashImage} />
+      <Background $i={1} />
+      <Background $i={2} />
+      <Background $i={3} />
+      <Background $i={4} />
     </Overflow>
   );
 }
