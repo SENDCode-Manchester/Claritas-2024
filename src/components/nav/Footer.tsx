@@ -1,11 +1,15 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {Link} from "react-router-dom";
 import social_linkedin from "../../assets/icons/social_linkedin.svg";
 import social_instagram from "../../assets/icons/social_instagram.svg";
 import social_twitter from "../../assets/icons/social_twitter.svg";
 
-const Container = styled.div`
+const Container = styled.div<{ $bottom: boolean; }>`
   background-color: #354860;
+  ${props => props.$bottom && css`
+    bottom: 0;
+    position: absolute;
+    width: 100vw;`}
   display: flex;
   flex-direction: column;
 `;
@@ -125,9 +129,9 @@ const UpperContainer = styled.div`
   }
 `;
 
-export function Footer() {
+export function Footer({ $bottom }: { $bottom?: boolean }) {
   return (
-    <Container>
+    <Container $bottom={$bottom ? $bottom : false}>
       <UpperContainer>
         <NoticeBox>
           <p>Claritas Wealth is a trading name of Claritas Wealth Management Ltd which is authorised and regulated by the Financial Conduct Authority under reference number 734968. Registered in England, number 08935426. Registered office: 10 Moorside Road, Heaton Moor, Stockport, SK4 4DT.</p>
