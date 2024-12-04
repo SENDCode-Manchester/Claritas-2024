@@ -68,12 +68,16 @@ const PostText = styled.p`
 `;
 
 export function BlogPost() {
-  const { id } = useParams();
+  const {id} = useParams();
   const posts: Post[] = useLoaderData() as Post[];
   const post: Post = posts.filter(item => item.id === id)[0];
 
   const previousPost: Post = posts[posts.indexOf(post) + 1] || undefined;
   const nextPost: Post = posts[posts.indexOf(post) - 1] || undefined;
+
+  if (!post) {
+    throw new Response("", { status: 404, statusText: "Not Found" });
+  }
 
   return (
     <>
