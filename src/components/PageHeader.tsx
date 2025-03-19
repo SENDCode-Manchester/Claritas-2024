@@ -24,7 +24,7 @@ const PageTitle = styled.h1`
   width: 60vw;
 
   @media screen and (max-width: 480px), (orientation: landscape) and (min-height: 320px) and (max-height: 720px) {
-    font-size: 64px;
+    font-size: 48px;
     width: 90vw;
   }
 `;

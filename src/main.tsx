@@ -8,6 +8,10 @@ import {Blog} from "./pages/Blog.tsx";
 import {BlogPost} from "./pages/BlogPost.tsx";
 import {Contact} from "./pages/Contact.tsx";
 import {ErrorPage} from "./pages/ErrorPage.tsx";
+import {ExecProfService} from "./pages/services/ExecProfService.tsx";
+import {BusinessOwnerService} from "./pages/services/BusinessOwnerService.tsx";
+import {FinancialIndepService} from "./pages/services/FinancialIndepService.tsx";
+import {ThirdActService} from "./pages/services/ThirdActService.tsx";
 
 const router = createBrowserRouter([
   {
@@ -47,7 +51,24 @@ const router = createBrowserRouter([
       },
       {
         path: "contact",
-        element: <Contact />
+        element: <Contact/>
+      },
+      // services
+      {
+        path: "business-owner",
+        element: <BusinessOwnerService />
+      },
+      {
+        path: "executives-professionals",
+        element: <ExecProfService />
+      },
+      {
+        path: "financial-independence",
+        element: <FinancialIndepService />
+      },
+      {
+        path: "third-act",
+        element: <ThirdActService />
       }
     ]
   }
