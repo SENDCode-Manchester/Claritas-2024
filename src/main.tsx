@@ -12,6 +12,7 @@ import {ExecProfService} from "./pages/services/ExecProfService.tsx";
 import {BusinessOwnerService} from "./pages/services/BusinessOwnerService.tsx";
 import {FinancialIndepService} from "./pages/services/FinancialIndepService.tsx";
 import {ThirdActService} from "./pages/services/ThirdActService.tsx";
+import {WhoWeWorkWith} from "./pages/services/WhoWeWorkWith.tsx";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
         element: <Contact/>
       },
       // services
+      {
+        path: "who-we-work-with",
+        element: <WhoWeWorkWith />
+      },
       {
         path: "business-owner",
         element: <BusinessOwnerService />

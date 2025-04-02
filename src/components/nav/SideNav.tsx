@@ -75,6 +75,7 @@ export function SideNav({ $display, $setDisplay, $open, $setOpen } : { $display:
       <LinkList>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/about">Meet the Team</NavLink>
+        <NavLink to="/who-we-work-with">Who We Work With</NavLink>
         <NavLink to="/blog">Blog</NavLink>
         <NavLink to="/contact">Contact</NavLink>
       </LinkList>

@@ -10,6 +10,7 @@ import {Testimonials} from "../components/content/dynamic/Testimonials.tsx";
 import {ContentBox} from "../components/content/ContentBox.tsx";
 import {Footer} from "../components/nav/Footer.tsx";
 import {LinkButton} from "../components/LinkButton.tsx";
+import {W4Grid, W4Item} from "./services/WhoWeWorkWith.tsx";
 
 const Content = styled.div`
   color: #ffffff;
@@ -56,6 +57,17 @@ const SplashSection = styled.div`
   width: 100%;
 `;
 
+const SectionHeading = styled.p`
+  font-size: 42px;
+  font-weight: 950;
+  margin-top: 96px;
+  text-align: center;
+
+  @media screen and (max-width: 480px), (orientation: landscape) and (min-height: 320px) and (max-height: 720px) {
+    font-size: 24px;
+  }
+`;
+
 export function Home() {
   return (
     <>
@@ -100,6 +112,13 @@ export function Home() {
           <LinkButton to="/contact">Get in touch for a chat</LinkButton>
         </ScrollContent>
       </ScrollBox>
+      <SectionHeading>Who We Work With</SectionHeading>
+      <W4Grid>
+        <W4Item $image={"/assets/images/pagehead_execprof.webp"} to={"/executives-professionals"}>Executives & Professionals</W4Item>
+        <W4Item $image={"/assets/images/pagehead_businessowner.webp"} to={"/business-owner"}>Business Owner</W4Item>
+        <W4Item $image={"/assets/images/pagehead_financialindep.webp"} to={"/financial-independence"}>Financial Independence</W4Item>
+        <W4Item $image={"/assets/images/pagehead_thirdact.webp"} to={"/third-act"}>Later years (the 'Third Act')</W4Item>
+      </W4Grid>
       <Testimonials $items={[
         // Images are loaded based on the names, for example:
         // Jack & Lindsey will load client_jack-lindsey.jpg
