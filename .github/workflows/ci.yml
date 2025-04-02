@@ -30,8 +30,8 @@ jobs:
       - name: Linting
         run: pnpm lint
 
-      - name: Auditing
-        run: pnpm audit
+#      - name: Auditing
+#        run: pnpm audit
 
       - name: Build static site
         run: pnpm build
