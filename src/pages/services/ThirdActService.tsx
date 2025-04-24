@@ -1,6 +1,7 @@
 import {PageHeader} from "../../components/PageHeader.tsx";
 import {Footer} from "../../components/nav/Footer.tsx";
 import styled from "styled-components";
+import {ContactForm} from "./ContactForm.tsx";
 
 const Container = styled.div`
     margin: 50px 20vw;
@@ -66,6 +67,7 @@ export function ThirdActService() {
           <ListItem><strong>Secure</strong> that you have a financial plan to do the things that you want to do.</ListItem>
           <ListItem><strong>Free to get on with your life</strong> because you have the <strong>peace of mind</strong> of knowing that financial matters are taken care of.</ListItem>
         </ul>
+        <ContactForm />
       </Container>
       <Footer />
     </>
