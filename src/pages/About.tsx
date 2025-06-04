@@ -17,7 +17,7 @@ const Grid = styled.div`
   justify-content: center;
   margin: 50px 20vw;
 
-  @media screen and (max-width: 730px), (orientation: landscape) and (min-height: 320px) and (max-height: 720px) {
+  @media screen and (max-width: 730px) {
     grid-template-columns: 1fr;
   }
 `;
