@@ -29,6 +29,7 @@ export const W4Item = styled(Link)<{ $image: string }>`
   font-weight: 600;
   height: 384px;
   justify-content: center;
+  text-align: center;
   text-decoration: none;
 
   @media screen and (max-width: 480px), (orientation: landscape) and (min-height: 320px) and (max-height: 720px) {
@@ -43,8 +44,8 @@ export function WhoWeWorkWith() {
       <PageHeader $backgroundImage={"/assets/images/pagehead_whoweworkwith.webp"} $title={"Who We Work With"} />
       <W4Grid>
         <W4Item $image={"/assets/images/pagehead_execprof.webp"} to={"/executives-professionals"}>Executives & Professionals</W4Item>
-        <W4Item $image={"/assets/images/pagehead_businessowner.webp"} to={"/business-owner"}>Business Owner</W4Item>
-        <W4Item $image={"/assets/images/pagehead_financialindep.webp"} to={"/financial-independence"}>Financial Independence</W4Item>
+        <W4Item $image={"/assets/images/pagehead_businessowner.webp"} to={"/business-owner"}>Business Owners</W4Item>
+        <W4Item $image={"/assets/images/pagehead_financialindep.webp"} to={"/financial-independence"}>Approaching Retirement or seeking Financial Independence</W4Item>
         <W4Item $image={"/assets/images/pagehead_thirdact.webp"} to={"/third-act"}>Later years (the 'Third Act')</W4Item>
       </W4Grid>
       <Footer />
