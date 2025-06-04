@@ -2,9 +2,15 @@ import styled from "styled-components";
 import {useEffect, useState} from "react";
 import emailjs from "@emailjs/browser";
 
+const Container = styled.div`
+  background-color: #354860;
+  color: #ffffff;
+  margin-top: 48px;
+  padding: 16px;
+`;
+
 const Header = styled.h2`
   font-size: 32px;
-  margin-top: 48px;
   margin-bottom: 8px;
 `;
 
@@ -91,6 +97,7 @@ const CustomButton = styled.button`
   font-family: inherit;
   font-size: 17px;
   margin-top: 2vh;
+  outline: solid 2px #ffffff;
   padding: 10px 36px;
   text-decoration: none;
   transition: opacity 1s ease;
@@ -112,6 +119,13 @@ export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
 
   async function submitForm() {
+    if (
+      // @ts-expect-error no types
+      !(formData.advice && formData.name && formData.email && formData.phone) ||
+      // @ts-expect-error no types
+      (option === 2 && !(formData.occupation && formData.age && formData.income && formData.assets)))
+      return alert("All fields are required");
+
     await emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, {
       ...formData,
       isExtendedOption: option === 2
@@ -130,7 +144,7 @@ export function ContactForm() {
   }, [option]);
 
   return (
-    <>
+    <Container>
       <Header>Contact</Header>
       {!submitted && (
         <OptionContainer>
@@ -217,6 +231,6 @@ export function ContactForm() {
           <Text>Your message has been submitted.</Text>
         </>
       )}
-    </>
+    </Container>
   );
 }
