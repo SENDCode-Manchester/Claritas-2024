@@ -146,18 +146,20 @@ export function ContactForm() {
   return (
     <Container>
       <Header>Contact</Header>
-      <p>Select an option:</p>
       {!submitted && (
-        <OptionContainer>
-          <div>
-            <AccentRadio type={"radio"} id={"opt1"} name={"option"} onChange={() => setOption(1)}/>
-            <OptionLabel htmlFor={"opt1"}>I am interested in the above and would like to arrange a no obligation, no cost introductory chat.</OptionLabel>
-          </div>
-          <div>
-            <AccentRadio type={"radio"} id={"opt2"} name={"option"} onChange={() => setOption(2)}/>
-            <OptionLabel htmlFor={"opt2"}>I am not sure whether the above is right for me but would like some guidance as to where I should go for my financial advice.</OptionLabel>
-          </div>
-        </OptionContainer>
+        <>
+          <Text>Select an option:</Text>
+          <OptionContainer>
+            <div>
+              <AccentRadio type={"radio"} id={"opt1"} name={"option"} onChange={() => setOption(1)}/>
+              <OptionLabel htmlFor={"opt1"}>I am interested in the above and would like to arrange a no obligation, no cost introductory chat.</OptionLabel>
+            </div>
+            <div>
+              <AccentRadio type={"radio"} id={"opt2"} name={"option"} onChange={() => setOption(2)}/>
+              <OptionLabel htmlFor={"opt2"}>I am not sure whether the above is right for me but would like some guidance as to where I should go for my financial advice.</OptionLabel>
+            </div>
+          </OptionContainer>
+        </>
       )}
       {(!submitted && option === 1) && (
         <>
