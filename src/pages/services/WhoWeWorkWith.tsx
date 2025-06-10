@@ -21,6 +21,7 @@ export const W4Item = styled(Link)<{ $image: string }>`
   background-blend-mode: darken;
   background-color: #00000030;
   background-image: url(${props => props.$image});
+  background-position: 10% 20%;
   background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;

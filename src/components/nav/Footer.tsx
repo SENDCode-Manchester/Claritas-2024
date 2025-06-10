@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-import {Link} from "react-router-dom";
+import {Link, ScrollRestoration} from "react-router-dom";
 import social_linkedin from "../../assets/icons/social_linkedin.svg";
 import social_instagram from "../../assets/icons/social_instagram.svg";
 import social_twitter from "../../assets/icons/social_twitter.svg";
@@ -130,7 +130,8 @@ const UpperContainer = styled.div`
 `;
 
 export function Footer({ $bottom }: { $bottom?: boolean }) {
-  return (
+  return (<>
+    <ScrollRestoration />
     <Container $bottom={$bottom ? $bottom : false}>
       <UpperContainer>
         <NoticeBox>
@@ -169,5 +170,5 @@ export function Footer({ $bottom }: { $bottom?: boolean }) {
         </SocialLinks>
       </LowerContainer>
     </Container>
-  );
+  </>);
 }

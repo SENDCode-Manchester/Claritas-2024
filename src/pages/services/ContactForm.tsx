@@ -15,7 +15,7 @@ const Header = styled.h2`
 `;
 
 const AccentRadio = styled.input`
-  accent-color: #354860;
+  accent-color: #916646;
 `;
 
 const OptionContainer = styled.form`
@@ -146,6 +146,7 @@ export function ContactForm() {
   return (
     <Container>
       <Header>Contact</Header>
+      <p>Select an option:</p>
       {!submitted && (
         <OptionContainer>
           <div>

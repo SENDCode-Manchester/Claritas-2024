@@ -31,7 +31,7 @@ const ListItem = styled.li`
 export function FinancialIndepService() {
   return (
     <>
-      <PageHeader $backgroundImage={"/assets/images/pagehead_financialindep.webp"} $title={"Financial Independence Service"} />
+      <PageHeader $backgroundImage={"/assets/images/pagehead_financialindep.webp"} $title={"Financial Independence Service"} $darken={true} />
       <Container>
         <Header><Bold>We work with lots of people in the run-up to retirement / financial independence and are familiar with the issues you may be facing.</Bold></Header>
         <Header>You're likely to be –</Header>
