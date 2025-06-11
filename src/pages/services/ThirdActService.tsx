@@ -37,7 +37,7 @@ export function ThirdActService() {
     <>
       <PageHeader $backgroundImage={"/assets/images/pagehead_thirdact.webp"} $title={"'Third Act' Service"} $darken={true} />
       <Container>
-        <Header><Bold>We work with lots of people that have entered the 'third act' of life and have either retired or achieved financial independence from work.</Bold><br />We're familiar with the issues you may be facing.</Header>
+        <Header><Bold>We work with lots of people that have entered the 'third act' of life and have either retired or achieved financial independence from work.</Bold> We're familiar with the issues you may be facing.</Header>
         <Header>You're likely to be –</Header>
         <ul>
           <ListItem>Unsure how much you can spend in the earlier years without jeopardising your financial future.</ListItem>

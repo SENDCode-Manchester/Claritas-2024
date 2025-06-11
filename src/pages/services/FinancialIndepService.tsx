@@ -43,10 +43,10 @@ export function FinancialIndepService() {
         </ul>
         <Header>You're looking to –</Header>
         <ul>
-          <ListItem>Create a financial plan to achieve financial independence from work. <Bold>How much is enough?</Bold></ListItem>
+          <ListItem><Bold>Create a financial plan</Bold> to achieve financial independence from work.</ListItem>
           <ListItem>Establish a long-term relationship with a trusted adviser who will truly understand you and what you’re trying to achieve.</ListItem>
           <ListItem>Work out what the next stage of your life will look like. We've seen this lots of times and can help you through this potentially difficult transition.</ListItem>
-          <ListItem>Work out <Bold>how much is enough?</Bold> You could already have enough and therefore be able to make changes to your life that you didn't think were possible.</ListItem>
+          <ListItem><Bold>Work out how much is enough?</Bold> You could already have enough and therefore be able to make changes to your life that you didn't think were possible.</ListItem>
           <ListItem><Bold>Strike the right balance between spending now and spending later.</Bold> You only get one chance to make the most of your younger and hopefully healthier years. We want you to get to a ripe old age, look back and feel like you've given life a good go!</ListItem>
           <ListItem><Bold>Ensure that you outlive your money rather than the other way around!</Bold></ListItem>
           <ListItem>Ensure that your loved ones would be ok if disaster strikes (death or incapacity).</ListItem>
