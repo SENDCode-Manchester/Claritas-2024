@@ -43,6 +43,7 @@ export function WhoWeWorkWith() {
   return (
     <>
       <PageHeader $backgroundImage={"/assets/images/pagehead_whoweworkwith.webp"} $title={"Who We Work With"} />
+      {/* The grid should be a component at some point as it also appears on the homepage */}
       <W4Grid>
         <W4Item $image={"/assets/images/pagehead_execprof.webp"} to={"/executives-professionals"}>Executives & Professionals</W4Item>
         <W4Item $image={"/assets/images/pagehead_businessowner.webp"} to={"/business-owner"}>Business Owners</W4Item>
