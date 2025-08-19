@@ -16,4 +16,4 @@ docker run -p 80:80 -d claritas-2024
 ```
 
 ## CI/CD
-This repository uses GitHub Actions to lint the code, audit dependencies and deploy to Netlify. The `main` branch deploys to https://sendcode-claritas-dev.netlify.app and the `stable` branch deploys to https://sendcode-claritas.netlify.app.
+This repository uses GitHub Actions to lint the code, audit dependencies and deploy to Netlify. The `main` branch deploys to https://sendcode-claritas-2024-dev.netlify.app and the `stable` branch deploys to https://sendcode-claritas-2024.netlify.app and https://claritaswm.co.uk.
