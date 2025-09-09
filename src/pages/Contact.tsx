@@ -3,7 +3,7 @@ import {Footer} from "../components/nav/Footer.tsx";
 import {useEffect, useState} from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
-import contact_email from "../assets/icons/contact_email.svg";
+// import contact_email from "../assets/icons/contact_email.svg
 import contact_phone from "../assets/icons/contact_phone.svg";
 
 const Box = styled.div`
@@ -153,7 +153,7 @@ export function Contact() {
     <>
       <PageHeader $backgroundImage={"/assets/images/pagehead_contact.webp"} $backgroundPosition={"50% 60%"} $title={"Contact"} />
       <Container>
-        <Header>If you are interested in finding out how Claritas can help you achieve your financial and lifestyle goals, please contact us.</Header>
+        <Header>If you're interested in finding out how Claritas Wealth can help you, please complete the form below and we'll be in touch. We'd love to hear from you.</Header>
         {!submitted && (
           <>
             <FormGrid>
@@ -183,11 +183,11 @@ export function Contact() {
           <Text>Your message has been submitted.</Text>
         )}
         <Flexbox>
-          <Box>
+          {/* <Box>
             <img alt={"Send us an E-mail"} src={contact_email} />
             <Header>Send us an E-mail</Header>
             <Link href={"mailto:hello@claritaswm.co.uk"}>hello@claritaswm.co.uk</Link>
-          </Box>
+          </Box> */}
           <Box>
             <img alt={"Give us a call"} src={contact_phone} />
             <Header>Give us a call</Header>

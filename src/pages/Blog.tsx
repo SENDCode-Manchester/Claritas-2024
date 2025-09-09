@@ -9,7 +9,8 @@ export type Post = {
   title: string,
   id: string,
   content: string[],
-  image: string // unused but present in JSON file
+  image?: string, // unused but present in JSON file
+  position?: string
 }
 
 const Grid = styled.div`

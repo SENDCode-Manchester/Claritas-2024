@@ -81,7 +81,7 @@ export function BlogPost() {
 
   return (
     <>
-      <PageHeader $backgroundImage={`/data/blog_images/${post.id}.webp`} $darken={true} $title={post.title} />
+      <PageHeader $backgroundImage={`/data/blog_images/${post.id}.webp`} $backgroundPosition={post.position ?? "center center"} $darken={true} $title={post.title} />
       <Container>
         <Breadcrumb>
           <Link to={"/blogs"}>
