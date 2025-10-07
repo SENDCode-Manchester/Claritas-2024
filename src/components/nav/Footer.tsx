@@ -59,8 +59,16 @@ const NoticeBox = styled.div`
   }
 `;
 
-const PrivacyPolicy = styled.a`
-  text-align: center;
+const FooterLinks = styled.div`
+  column-gap: 24px;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 800px), (orientation: landscape) and (min-height: 320px) and (max-height: 720px) {
+    align-items: center;
+    flex-direction: column;
+    row-gap: 3px;
+  }
 `;
 
 const Section = styled.div`
@@ -155,8 +163,11 @@ export function Footer({ $bottom }: { $bottom?: boolean }) {
         </Section>
       </UpperContainer>
       <LowerContainer>
-        <p>Copyright DigitalAdvantage. All Rights Reserved.</p>
-        <PrivacyPolicy href="/Privacy_Policy_2023.pdf" target="_blank">Privacy Policy</PrivacyPolicy>
+        <p>&copy; SENDCode MMXXV</p>
+        <FooterLinks>
+          <a href="/Privacy_Policy_2023.pdf" target="_blank">Privacy Policy</a>
+          <a className="cky-banner-element" href="#">Cookie Settings</a>
+        </FooterLinks>
         <SocialLinks>
           <a href="https://www.linkedin.com/company/claritas-wealth-management-ltd/" target={"_blank"}>
             <img alt="LinkedIn" draggable={false} src={social_linkedin} />
