@@ -91,7 +91,7 @@ export function BlogPost() {
           <p>{post.title}</p>
         </Breadcrumb>
         {post.content.map((item, key) => {
-          return (<PostText key={key}>{item}</PostText>);
+          return (<PostText key={key} dangerouslySetInnerHTML={{ __html: item }}></PostText>);
         })}
         <Navigation>
           {previousPost ? <NavigationLink to={`/blogs/${previousPost.id}`}>
