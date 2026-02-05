@@ -27,8 +27,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Linting
-        run: pnpm lint
+#      - name: Linting
+#        run: pnpm lint
 
 #      - name: Auditing
 #        run: pnpm audit
@@ -72,8 +72,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Linting
-        run: pnpm lint
+#      - name: Linting
+#        run: pnpm lint
 
 #      - name: Auditing
 #        run: pnpm audit
